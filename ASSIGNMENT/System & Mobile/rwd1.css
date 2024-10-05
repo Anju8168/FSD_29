@@ -1,0 +1,44 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+.container__img {
+  flex: 1;
+  border: 1px solid red;
+  background-image: url("./logo.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container__text {
+  flex: 1;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /*[class^="container__text__"]{
+      font-size: 1.5rem;*/
+}
+.container__text__1 {
+  font-size: 2.4rem;
+}
+.container__text [class^=container__text__]:not(.container-text-1) {
+  font-size: 1.5rem;
+}
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+  }
+  .container__text [class^=container__text__]:not(.container__text__1) {
+    display: none;
+  }
+  .container__text__1 {
+    font-size: 5vw;
+  }
+}/*# sourceMappingURL=rwd1.css.map */
